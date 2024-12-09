@@ -38,7 +38,7 @@ public class Wings {
    @Column(name = "Occupied")
    private int occupied;
 
-   @Column(name = "Room_ID")
+   @Column(name = "RoomID")
    private String roomId;
    @OneToMany( mappedBy = "wing")
    @JsonManagedReference

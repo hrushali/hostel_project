@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4 text-center">Results of Addition of Students to Database</h1>
+
+        <!-- Student Data Table -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Thymeleaf iteration over the 'Prasad' object -->
+                <tr th:each="pp : ${Prasad}">
+                    <td th:text="${pp.Student_ID}"></td>
+                    <td th:text="${pp.Name}"></td>
+                    <td th:text="${pp.Age}"></td>
+                    <td th:text="${pp.Gender}"></td>
+                    <td th:text="${pp.Phone_Number}"></td>
+                    <td th:text="${pp.Email}"></td>
+                </tr>
+
+            </tbody>
+        
+        </table>
+
+        <!-- <h1>wings</h1>
+<table border="1">
+
+    <thead>
+        <tr>
+           
+            <th>Wing Name</th>
+            <th>Gender Allowed</th>
+            <th>Capacity</th>
+            <th>occupied</th>
+            <th>Room ID</th>
+            <th>Wing_Room</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr th:each="pp : ${Prasad}">
+ 
+            <td th:text="${pp.Wing_Name}"></td>
+            <td th:text="${pp.Gender_Allowed}"></td>
+            <td th:text="${pp.Capacity}"></td>
+            <td th:text="${pp.Occupied}"></td>
+            <td th:text="${pp.RoomId}"></td>
+        </tr>
+
+    </tbody>
+</table>   -->
+    </body>
+    </html>
